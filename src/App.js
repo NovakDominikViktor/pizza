@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, NavLink, Routes, Route } from "react-router-dom";
+import { PizzaListPage } from "./PizzaListPage";
+import { PizzaSinglePage } from "./PizzaSinglePage";
+import { PizzaCreatePage } from "./PizzaCreatePage";
+import { PizzaModPage } from "./PizzaModPage";
+import { PizzaDeletePage } from "./PizzaDeletePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink to={`/`} className="nav-link">
+                <span className="nav-link">Pizzák</span>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to={`/uj-pizza`} className="nav-link">
+                <span className="nav-link">Új pizza</span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<PizzaListPage />} />
+        <Route path="/pizza/:pizzaId" element={<PizzaSinglePage />} />
+        <Route path="/uj-pizza" element={<PizzaCreatePage />} />
+        <Route path="/mod-pizza/:pizzaId" element={<PizzaModPage />} />
+        <Route path="/del-pizza/:pizzaId" element={<PizzaDeletePage />} />
+      </Routes>
+    </Router>
   );
 }
 
