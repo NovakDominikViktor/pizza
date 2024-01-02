@@ -6,7 +6,7 @@ export function PizzaDeletePage() {
   const param = useParams();
   const id = param.pizzaId;
 
-  const [pizza, setPizza] = useState({});
+  const [pizza, setPizza] = useState([]);
   const [isPending, setPending] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function PizzaDeletePage() {
         <div className='card p-3'>
           <div className='card-body'>
             <h4>{pizza.name}</h4>
-            {/* Display other pizza-specific details */}
+          
             <form onSubmit={handleDelete}>
               <div>
                 <NavLink to={"/"}>

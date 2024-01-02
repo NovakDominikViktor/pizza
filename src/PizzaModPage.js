@@ -6,7 +6,7 @@ export function PizzaModPage() {
   const navigate = useNavigate();
   const id = param.pizzaId;
 
-  const [, setPizza] = useState({});
+  const [, setPizza] = useState([]);
   const [modName, setModName] = useState("");
   const [modIsGlutenFree, setModIsGlutenFree] = useState(false);
   const [modImageURL, setModImageURL] = useState("");
