@@ -1,4 +1,6 @@
+import React from 'react';
 import { BrowserRouter as Router, NavLink, Routes, Route } from "react-router-dom";
+import './App.css';
 import { PizzaListPage } from "./PizzaListPage";
 import { PizzaSinglePage } from "./PizzaSinglePage";
 import { PizzaCreatePage } from "./PizzaCreatePage";
@@ -26,10 +28,10 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<PizzaListPage />} />
-        <Route path="/pizza/:pizzaId" element={<PizzaSinglePage />} />
+        <Route path="/pizza/:id" element={<PizzaSinglePage />} />
         <Route path="/uj-pizza" element={<PizzaCreatePage />} />
-        <Route path="/mod-pizza/:pizzaId" element={<PizzaModPage />} />
-        <Route path="/del-pizza/:pizzaId" element={<PizzaDeletePage />} />
+        <Route path="/mod-pizza/:id" element={<PizzaModPage />} />
+        <Route path="/torol-pizza/:id" element={<PizzaDeletePage />} />
       </Routes>
     </Router>
   );
