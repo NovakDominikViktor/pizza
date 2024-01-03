@@ -54,7 +54,7 @@ export function PizzaModPage() {
           console.log("PUT válasz fejlécek:", response.headers);
           console.log("PUT válasz státusz:", response.status);
   
-          return response.text(); // Most csak a szöveges választ olvassuk be
+          return response.text(); 
       })
       .then((data) => {
           console.log("Módosítás után (szöveges válasz):", data);

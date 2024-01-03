@@ -13,7 +13,7 @@ export function PizzaCreatePage() {
                     fetch("https://pizza.kando-dev.eu/Pizza", {
                       method: "POST",
                       headers: {
-                          "Content-Type": "application/json", // Hozzáadva
+                          "Content-Type": "application/json", 
                       },
                       body: JSON.stringify({
                           name: e.target.elements.name.value,

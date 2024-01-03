@@ -3,7 +3,7 @@ import { useParams, NavLink } from "react-router-dom";
 
 export function PizzaSinglePage() {
     const param = useParams();
-    const id = param.id; // Mivel a pizzák URL-je "/pizza/:id"
+    const id = param.id; 
     const [pizza, setPizza] = useState({});
     const [isPending, setPending] = useState(false);
 
