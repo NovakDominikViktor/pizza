@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 
-export function PizzaDeletePage() {
+export default function PizzaDeletePage() {
     const navigate = useNavigate();
     const params = useParams();
     const id = params.id;

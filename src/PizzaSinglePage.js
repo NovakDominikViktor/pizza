@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, NavLink } from "react-router-dom";
 
-export function PizzaSinglePage() {
+export default function PizzaSinglePage() {
     const param = useParams();
     const id = param.id; 
     const [pizza, setPizza] = useState({});

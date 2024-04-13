@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export function PizzaModPage() {
+export default function PizzaModPage() {
     const navigate = useNavigate();
     const params = useParams();
     const id = params.id;
